@@ -101,7 +101,7 @@ export default function Verifier() {
               <>{g1} <Link to="/login" className="link">{g2}</Link> {g3}</>
             )}
           </small>
-          <motion.button className="btn btn-primary" disabled={blank || over || busy || exhausted} whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }}>
+          <motion.button className={`btn btn-primary ${busy ? 'loading' : ''}`} aria-busy={busy} disabled={blank || over || busy || exhausted} whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }}>
             {busy ? <span className="spin" /> : null}
             {busy ? t('verify.busy') : t('verify.submit')}
           </motion.button>

@@ -17,9 +17,9 @@ export default function App() {
   const location = useLocation()
   const lenis = useRef(null)
 
-  // Lenis disinkronkan dengan ticker GSAP agar ScrollTrigger tetap akurat.
+  
   useEffect(() => {
-    const l = new Lenis({ lerp: 0.1 })
+    const l = new Lenis({ smoothWheel: false }) 
     lenis.current = l
     scroll.lenis = l
     l.on('scroll', ScrollTrigger.update)
