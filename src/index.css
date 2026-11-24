@@ -356,3 +356,10 @@ button { font-family: inherit; }
 .lang-sw button.on { background: var(--ink); color: var(--bg); }
 
 .style-cap { display: block; }
+
+/* mobile: judul boleh turun baris, menu tidak tembus pandang */
+@media (max-width: 760px) {
+  .hero-full h1 { font-size: clamp(30px, 9vw, 44px); }
+  .hero-word { white-space: normal; }
+  .menu { background: #0d0e10; }
+}
